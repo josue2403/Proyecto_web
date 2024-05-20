@@ -1,0 +1,173 @@
+/* Global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Oswald", sans-serif;
+    background-color: rgba(210, 219, 219, 0.932);
+    color: #000;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura de la ventana */
+}
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* Navigation */
+.nav-main {
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding: 20px 0;
+    background-color: #262626;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.nav-brand {
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 30px;
+    color: #fff;
+}
+.nav-brand .logo-highlight {
+    color: aqua;
+}
+.nav-main ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    padding-right: 20px;
+}
+.nav-main ul li {
+    padding: 20px;
+    margin-left: 20px;
+}
+.nav-main ul li a {
+    padding: 2px;
+    color: #ffffff;
+    font-size: 20px;
+}
+.nav-main ul li a:hover {
+    border-bottom: 2px solid aqua;
+    color: aqua;
+}
+.nav-main .nav-menu li .open {
+    color: aqua;
+}
+
+/* Responsive Button */
+.menu-btn {
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    right: 30px;
+    z-index: 1001;
+    display: none;
+    color: #fff;
+}
+
+/* Results Container */
+.results-container {
+    width: 90%;
+    margin: 150px auto 20px auto;
+    text-align: center;
+}
+.chart-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+.results-table th, .results-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+.results-table th {
+    background-color: #262626;
+    color: white;
+}
+.results-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.results-table tr:hover {
+    background-color: #ddd;
+}
+
+/* Footer */
+.footer {
+    background-color: #262626;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* El margen superior se ajusta automáticamente */
+}
+
+@media (max-width: 700px) {
+    .menu-btn {
+        display: block; /* Muestra el botón en dispositivos móviles */
+        position: fixed; /* Posiciona el botón en relación a la ventana */
+        top: 26px; /* Posición desde arriba */
+        right: 30px; /* Posición desde la derecha */
+        z-index: 1001; /* Asegura que el botón esté por encima de otros elementos */
+    }
+    .menu-btn:hover {
+        opacity: 0.5; /* Opacidad al pasar el mouse */
+    }
+    .nav-main ul.nav-menu {
+        display: block; /* Muestra el menú de navegación */
+        position: absolute; /* Posiciona el menú en relación a su contenedor */
+        top: 90px; /* Posición desde arriba */
+        right: 0; /* Alinea el menú a la derecha */
+        background: #262626; /* Color de fondo del menú */
+        width: 50%; /* Ancho del menú */
+        height: calc(100vh - 90px); /* Altura basada en la ventana */
+        border-right: #ccc 1px solid; /* Borde derecho */
+        opacity: 0.9; /* Opacidad del menú */
+        padding: 5px; /* Relleno interno */
+        transform: translateX(100%); /* Mueve el menú fuera de la vista */
+        transition: transform 0.5s ease-in-out; /* Transición para el menú */
+    }
+    .nav-main ul.nav-menu li {
+        padding: 10px; /* Relleno interno */
+        border-bottom: #ccc solid 1px; /* Borde inferior */
+        font-size: 14px; /* Tamaño de fuente */
+    }
+    .nav-main ul.nav-menu li:last-child {
+        border-bottom: 0; /* Elimina el borde del último elemento */
+    }
+    .nav-main ul.nav-menu.show {
+        transform: translateX(0); /* Mueve el menú a la vista */
+    }
+    .nav-main ul.nav-menu-right {
+        margin-right: 50px; /* Margen derecho */
+    }
+    .footer {
+        padding: 40px auto; /* Relleno interno */
+    }
+    .footer p {
+        font-size: 12px; /* Tamaño de fuente */
+    }
+}

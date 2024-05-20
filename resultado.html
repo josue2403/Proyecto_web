@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultados de Encuestas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/resultado.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+  </div>
+  <!-- Navigation -->
+  <nav class="nav-main">
+    <div class="nav-brand">DANI<span class="logo-highlight">QUIZ</span></div>
+    <ul class="nav-menu">
+      <li>
+        <a href="home.html">Inicio</a>
+      </li>
+      <li>
+        <a href="disponible.html">Encuestas Disponibles</a>
+      </li>
+      <li>
+        <a class="open" href="">Resultados</a>
+      </li>
+      <li>
+        <a href="profile.html">Perfil</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="results-container">
+    <h1>Resultados de las Encuestas</h1>
+    <div class="chart-container">
+      <canvas id="surveyChart"></canvas>
+    </div>
+    <table class="results-table">
+      <thead>
+        <tr>
+          <th>Pregunta</th>
+          <th>Respuesta Más Común</th>
+          <th>Porcentaje</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pregunta 1</td>
+          <td>Respuesta A</td>
+          <td>69%</td>
+        </tr>
+        <tr>
+          <td>Pregunta 2</td>
+          <td>Respuesta B</td>
+          <td>31%</td>
+        </tr>
+        <!-- Agregar más filas según sea necesario -->
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 DANIQUIZ. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <script src="/js/results.js"></script>
+</body>
+</html>

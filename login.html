@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <!-- Fuente de Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+
+<body>
+  <!-- Botón del menú -->
+  <div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+  </div>
+  <!-- Navegación -->
+  <nav class="nav-main">
+    <!-- Marca -->
+    <a href="index.html">
+      <div class="nav-brand">DANI<span class="logo-highlight">QUIZ</span></div>
+    </a>
+    <!-- Menú de navegación -->
+    <ul class="nav-menu">
+      <li>
+        <a class="open" href="login.html">Iniciar Sesión</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Formulario de inicio de sesión -->
+  <div class="showcase">
+    <form class="formulario" id="loginForm">
+      <h1>Inicio de Sesión</h1>
+      <div class="contenedor">
+        <!-- Campo de correo electrónico -->
+        <div class="input-contenedor">
+          <i class="fas fa-envelope icon"></i>
+          <input type="email" placeholder="Correo Electrónico" required>
+        </div>
+        <!-- Campo de contraseña -->
+        <div class="input-contenedor">
+          <i class="fas fa-key icon"></i>
+          <input type="password" placeholder="Contraseña" required>
+        </div>
+        <!-- Botón de inicio de sesión -->
+        <button type="submit" class="button">Iniciar Sesión</button>
+        <p>¿No tienes una cuenta? <a class="link" href="registro.html">Regístrate</a></p>
+      </div>
+    </form>
+  </div>
+
+
+  <!-- Scripts -->
+  <script src="/js/main.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="/js/index.js"></script>
+</body>
+
+</html>

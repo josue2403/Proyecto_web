@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta</title>
+    <link rel="stylesheet" href="css/encuesta.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- CUSTOM CSS -->
+</head>
+<body>
+    <div class="menu-btn">
+        <i class="fas fa-bars fa-2x"></i>
+    </div>
+      <!-- Navigation -->
+      <nav class="nav-main">
+        <!-- Brand -->
+        <div class="nav-brand">DANI<span class="logo-highlight">QUIZ</span></div>
+        <!-- Left Nav -->
+        <ul class="nav-menu">
+            <li>
+                <a href="home.html">Inicio</a>
+              </li>
+            <li>
+                <a href="disponible.html">Encuestas Disponibles</a>
+              </li>
+              <li>
+                <a href="resultado.html">Resultados</a>
+              </li>
+              <li>
+                <a href="profile.html">Perfil</a>
+              </li>
+        </ul>
+      </nav>
+    <!-- Contenido de la encuesta -->
+    <div class="container">
+        <h1 id="tituloPrincipal">SISTEMA DE ENCUESTAS</h1>
+        <input type="text" class="encuesta-input" placeholder="Título de la encuesta" required>
+    </div>
+
+    <!-- Sección para seleccionar fecha y hora límite -->
+    <div class="fecha">
+        <h1>Fecha y hora límite:</h1>
+        <input type="datetime-local" id="fechaHoraLimite" name="fechaHoraLimite" class="fecha-input" required>
+    </div>
+
+    <!-- Sección para las preguntas -->
+    <div class="preguntas-section">
+        <!-- Pregunta inicial -->
+        <div class="pregunta-container " style="display: none;">
+            <div class="container1">
+                <div class="pregunta-item">
+                    <input type="text" class="pregunta-input" placeholder="Ingrese la pregunta">
+                    <select class="pregunta-tipo">
+                        <option value=""></option>
+                        <option value="parrafo">Párrafo</option>
+                        <option value="opcion-multiple">Opción Múltiple</option>
+                    </select>
+                    <div class="opciones-multiple" style="display: none;">
+                        <div class="opcion-items">
+                        </div>
+                        <button type="button" class="agregar-opcion">+ Añadir Opción</button>
+                    </div>
+                </div>
+                <i class="fas fa-trash-alt eliminar-pregunta" ></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón para agregar nueva pregunta -->
+    <button type="button" class="agregar-pregunta">
+        <i class="fas fa-plus-circle"></i> <!-- Icono de Font Awesome -->
+    </button>
+
+    <!-- Botón para crear la encuesta -->
+    <button type="button" class="crear-encuesta">Crear Encuesta</button>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/script.js"></script>
+
+</body>
+</html>

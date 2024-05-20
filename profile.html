@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Usuario</title>
+  <!-- Fuente Oswald de Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+  <!-- Botón de menú para navegación móvil -->
+  <div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+  </div>
+  <!-- Navegación principal -->
+  <nav class="nav-main">
+    <!-- Marca del sitio -->
+    <a href="index.html">
+      <div class="nav-brand">DANI<span class="logo-highlight">QUIZ</span></div>
+    </a>
+    <!-- Menú de navegación -->
+    <ul class="nav-menu">
+      <li>
+        <a href="home.html">Inicio</a>
+      </li>
+      <li>
+        <a href="disponible.html">Encuestas Disponibles</a>
+      </li>
+      <li>
+        <a href="resultado.html">Resultados</a>
+      </li>
+      <li>
+        <a class="open" href="profile.html">Perfil</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Formulario de perfil -->
+  <div class="form">
+    <form class="formulario" id="perfilForm">
+      <h1>Perfil de Usuario</h1>
+      <div class="contenedor">
+        <!-- Campo de nombre de usuario -->
+        <div class="input-contenedor">
+          <i class="fas fa-user icon"></i>
+          <input type="text" placeholder="Daniel Josué Cedeño Sornoza" readonly>
+        </div>
+        <!-- Campo de correo electrónico -->
+        <div class="input-contenedor">
+          <i class="fas fa-envelope icon"></i>
+          <input type="email" placeholder="e1314743814@live.uleam.edu.ec" readonly>
+        </div>
+        <!-- Botones para editar información y cambiar contraseña -->
+        <button class="edit-button">Editar Información</button>
+        <button class="edit-button">Cambiar contraseña</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Sección para cerrar sesión -->
+  <div class="logout-section">
+    <a href="index.html"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+  </div>
+
+  <!-- Archivos JavaScript -->
+  <script src="/js/validation.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

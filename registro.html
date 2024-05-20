@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <!-- Fuente de Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+  <!-- Botón del menú -->
+  <div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+  </div>
+  <!-- Navegación -->
+  <nav class="nav-main">
+    <a href="index.html">
+      <div class="nav-brand">DANI<span class="logo-highlight">QUIZ</span></div>
+    </a>
+    <ul class="nav-menu">
+      <li>
+        <a class="open" href="registro.html">Registro de usuario</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Formulario de registro -->
+  <div class="showcase1">
+    <form class="formulario" id="registroForm">
+      <h1>Registro de usuario</h1>
+      <div class="contenedor">
+        <!-- Campo de nombre completo -->
+        <div class="input-contenedor">
+          <i class="fas fa-user icon"></i>
+          <input type="text" id="nombre" placeholder="Nombre completo" pattern="[A-Za-z\s]+" title="Por favor, introduce solo letras" required>
+          <span class="error-message" id="nombre-error">El nombre debe tener mínimo 3 letras</span>
+        </div>
+        <!-- Campo de correo electrónico -->
+        <div class="input-contenedor">
+          <i class="fas fa-envelope icon"></i>
+          <input type="email" id="email" placeholder="Correo Electrónico" required>
+          <span class="error-message" id="email-error"></span>
+        </div>
+        <!-- Campo de contraseña -->
+        <div class="input-contenedor">
+          <i class="fas fa-key icon"></i>
+          <input type="password" id="password" placeholder="Contraseña" required>
+          <span class="error-message" id="password-error">La contraseña debe contener mínimo 8 dígitos</span>
+        </div>
+        <!-- Botón de registro -->
+        <button type="submit" class="button">Registrarse</button>
+        <p>¿Ya tienes una cuenta? <a class="link" href="login.html">Iniciar sesión</a></p>
+      </div>
+    </form>
+  </div>
+
+  <!-- Archivos JavaScript -->
+  <script src="/js/validation.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/index.js"></script>
+</body>
+</html>
